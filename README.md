@@ -33,7 +33,7 @@ Le code du projet a été mis en place selon la structure d'un package. Nous dé
 Nous détaillons dans cette section l'utilité des différentes méthodes implémentées en R.
 
 
-**simulerEchantillon <- function(n, p=2, K, delta)} : Cette fonction permettant de simuler les données de l'échantillon dans un espace $\mathbb{R}^p$ avec un nombre de classes prédéfinies.
+**simulerEchantillon <- function(n, p=2, K, delta)** : Cette fonction permettant de simuler les données de l'échantillon dans un espace $`\mathbb{R}^p`$ avec un nombre de classes prédéfinies.
 
 @param n *integer*. la taille de l'échantillon à simuler 
 
@@ -117,7 +117,7 @@ Durant ce projet, la librairie Eigen a beaucoup été utilisée. Il s'agit d'une
 
 Pour vérifier que notre algorithme fonctionne bien, il est d'usage de faire appel au graphe d'évolution de la vraisemblance. Comme énoncé précédemment, nous utilisons plutôt la log-vraisemblance qui n'est juste qu'une transformation monotone de cette dernière.
 
-L'EM est un algorithme itératif, qui est construit de telle manière que l'augmentation de la valeur de la log-vraisemblance à chaque itération est garantie (i.e. $l(\Theta^{(t)}) \leq l(\Theta^{(t+1)}) ~~ \forall t \geq 0 $).
+L'EM est un algorithme itératif, qui est construit de telle manière que l'augmentation de la valeur de la log-vraisemblance à chaque itération est garantie (i.e. $`l(\Theta^{(t)}) \leq l(\Theta^{(t+1)}) ~~ \forall t \geq 0`$).
 
 Les cas montrent de bons résultats.
 
