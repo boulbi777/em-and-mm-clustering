@@ -70,7 +70,7 @@ Nous détaillons dans cette section l'utilité des différentes méthodes implé
 @return *list*. Retourne l'ensemble des paramètres
 
 
-**singleEM <- function(x, K, param, tol)** : Algorithme EM dans le cas des données manquantes avec $`\beta_{kj}\neq 0`$.
+**singleEM <- function(x, K, param, tol)** : Algorithme EM dans le cas des données manquantes avec $`\beta_{kj}` différent de 0$.
 
 @param x *matrix*. L'échantillon utilisé pour le clustering
 
@@ -103,7 +103,6 @@ Nous détaillons dans cette section l'utilité des différentes méthodes implé
 @param useC *bool*. True si nous voulons utiliser le langage C
 
 @return *list*. Retourne l'ensemble des paramètres ainsi que l'évolution de la vraisemblance
-
 
 
 
