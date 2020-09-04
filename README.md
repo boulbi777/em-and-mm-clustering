@@ -2,7 +2,7 @@
 
 Clustering en présence des données manquantes MAR et MCAR dans une base de données en utilisant les algorithmes Expectation Maximization (EM) et Minorization Maximization (MM).
 
-Ce projet est focalisé sur la comparaison des performances de certains algorithmes declustering  en  présence  de données  manquantes  dans  notre  échantillon  de  travail.  Plusieursétudes ont été faites sur la possibilité de tenir compte des valeurs manquantes dans la basede donnée pour effectuer un meilleur clustering. Notre étude s’est essentiellement baséesur l’écriture et l’implémentation de l’algorithme EM dans le cas des données manquantes.Nous avons adopté une méthode très particulière pour contrôler le processus générateur desdonnées manquantes via des fonctions de répartition bien connues. Les résultats de l’implémentation de cet algorithme nous montrent une croissance continue de la log-vraisemblanceau fur et à mesure que le nombre d’itération augmente. Nous sommes arrivés à la conclusionque les écritures théoriques de l’EM en tenant compte des données manquantes MCAR et MARsont satisfaisantes et peuvent être sujet de comparaison par rapport à d’autres algorithmes de clustering gérant également des données manquantes.
+Ce projet est focalisé sur la comparaison des performances de certains algorithmes declustering  en  présence  de données  manquantes  dans  notre  échantillon  de  travail.  Plusieursétudes ont été faites sur la possibilité de tenir compte des valeurs manquantes dans la basede donnée pour effectuer un meilleur clustering. Notre étude s’est essentiellement baséesur l’écriture et l’implémentation de l’algorithme EM dans le cas des données manquantes.Nous avons adopté une méthode très particulière pour contrôler le processus générateur desdonnées manquantes via des fonctions de répartition bien connues. Les résultats de l’implémentation de cet algorithme nous montrent une croissance continue de la log-vraisemblanceau fur et à mesure que le nombre d’itération augmente. Nous sommes arrivés à la conclusionque les écritures théoriques de l’EM en tenant compte des données manquantes MCAR et MAR sont satisfaisantes et peuvent être sujet de comparaison par rapport à d’autres algorithmes de clustering gérant également des données manquantes.
 
 ## Structure du code du projet
 Le code du projet a été mis en place selon la structure d'un package. Nous détaillons les dossiers et fichiers importants du projet.
@@ -51,7 +51,7 @@ Nous détaillons dans cette section l'utilité des différentes méthodes implé
 
 @param K *integer*. nombre de clusters
 
-@param ech *list*. L'échantillon complet généré (généralement l'output de la fonction **simulerEchantillon}).
+@param ech *list*. L'échantillon complet généré (généralement l'output de la fonction **simulerEchantillon**).
 
 @return *list*. retourne La liste complète des paramètres du modèle.
 
