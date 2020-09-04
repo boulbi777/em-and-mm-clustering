@@ -2,7 +2,7 @@
 
 Clustering en présence des données manquantes MAR et MCAR dans une base de données en utilisant les algorithmes Expectation Maximization (EM) et Minorization Maximization (MM).
 
-Ce projet est focalisé sur la comparaison des performances de certains algorithmes declustering  en  présence  de données  manquantes  dans  notre  échantillon  de  travail.  Plusieursétudes ont été faites sur la possibilité de tenir compte des valeurs manquantes dans la basede donnée pour effectuer un meilleur clustering. Notre étude s’est essentiellement baséesur l’écriture et l’implémentation de l’algorithme EM dans le cas des données manquantes.Nous avons adopté une méthode très particulière pour contrôler le processus générateur desdonnées manquantes via des fonctions de répartition bien connues. Les résultats de l’implémentation de cet algorithme nous montrent une croissance continue de la log-vraisemblanceau fur et à mesure que le nombre d’itération augmente. Nous sommes arrivés à la conclusionque les écritures théoriques de l’EM en tenant compte des données manquantes MCAR et MAR sont satisfaisantes et peuvent être sujet de comparaison par rapport à d’autres algorithmes de clustering gérant également des données manquantes.
+Ce projet est focalisé sur la comparaison des performances de certains algorithmes declustering  en  présence  de données  manquantes  dans  notre  échantillon  de  travail.  Plusieurs études ont été faites sur la possibilité de tenir compte des valeurs manquantes dans la base de donnée pour effectuer un meilleur clustering. Notre étude s’est essentiellement baséesur l’écriture et l’implémentation de l’algorithme EM dans le cas des données manquantes. Nous avons adopté une méthode très particulière pour contrôler le processus générateur des données manquantes via des fonctions de répartition bien connues. Les résultats de l’implémentation de cet algorithme nous montrent une croissance continue de la log-vraisemblance au fur et à mesure que le nombre d’itération augmente. Nous sommes arrivés à la conclusionque les écritures théoriques de l’EM en tenant compte des données manquantes MCAR et MAR sont satisfaisantes et peuvent être sujet de comparaison par rapport à d’autres algorithmes de clustering gérant également des données manquantes.
 
 ## Structure du code du projet
 Le code du projet a été mis en place selon la structure d'un package. Nous détaillons les dossiers et fichiers importants du projet.
@@ -27,10 +27,8 @@ Le code du projet a été mis en place selon la structure d'un package. Nous dé
 - **DESCRIPTION** : Contient une description succincte  du projet.
 
 
-
 ## Les méthodes R utilisées
 Nous détaillons dans cette section l'utilité des différentes méthodes implémentées en R.
-
 
 **simulerEchantillon <- function(n, p=2, K, delta)** : Cette fonction permettant de simuler les données de l'échantillon dans un espace $`\mathbb{R}^p`$ avec un nombre de classes prédéfinies.
 
@@ -45,8 +43,6 @@ Nous détaillons dans cette section l'utilité des différentes méthodes implé
 @return *list*.Retourne la liste des échantillons X, Z, R.
 
 
-
-
 **initialisation <- function(K, ech, seed)** : Cette fonction permet d'initialisation des paramètres de l'algo EM.
 
 @param K *integer*. nombre de clusters
@@ -54,7 +50,6 @@ Nous détaillons dans cette section l'utilité des différentes méthodes implé
 @param ech *list*. L'échantillon complet généré (généralement l'output de la fonction **simulerEchantillon**).
 
 @return *list*. retourne La liste complète des paramètres du modèle.
-
 
 
 **singleEM0 <- function(x, K, param, tol)** : Algorithme EM dans le cas des données manquantes avec $`\beta_{kj}=0`$ (cas MCAR). Cette fonction peut être exécutée sans préalablement utiliser les deux précédentes (i.e. Lorsqu'un utilisateur possède déjà ses propres données et une initialisation des paramètres de son modèle).
@@ -81,7 +76,6 @@ Nous détaillons dans cette section l'utilité des différentes méthodes implé
 @param tol *double*. Critère d'arrêt de l'algorithme
 
 @return *list*. Retourne l'ensemble des paramètres
-
 
 
 **mainEM <- function(n, p, delta, K, epsilon, seed, beta = FALSE, useC = FALSE)** : Cette fonction principale du package. A lancer pour tout éxécuter automatiquement. Lancer les autres fonctions singleEM ou singleEM0 lorsqu'on possède déjà l'échantillon. Cette fonction fait automatiquement appel aux fonctions **simulerEchantillon** et **initialisation**. Elle fait également appel aux fonction C++ lorsque **useC = TRUE**.
@@ -118,4 +112,3 @@ Pour vérifier que notre algorithme fonctionne bien, il est d'usage de faire app
 L'EM est un algorithme itératif, qui est construit de telle manière que l'augmentation de la valeur de la log-vraisemblance à chaque itération est garantie (i.e. $`l(\Theta^{(t)}) \leq l(\Theta^{(t+1)}) ~~ \forall t \geq 0`$).
 
 Les cas montrent de bons résultats.
-
