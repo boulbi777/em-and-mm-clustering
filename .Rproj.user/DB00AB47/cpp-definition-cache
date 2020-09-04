@@ -1,0 +1,53 @@
+[
+    {
+        "file": "/home/bouba/Ensai Informatique/Stage_3A/em-clustering-algo/EMandMMPackage/src/EM.cpp",
+        "file_last_write": 1598543549.0,
+        "definitions": [
+            {
+                "usr": "c:@F@glm_coefs#I#I#I#d#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "glm_coefs(Rcpp::NumericVector, Rcpp::NumericMatrix, Rcpp::NumericVector, double)",
+                "file": "/home/bouba/Ensai Informatique/Stage_3A/em-clustering-algo/EMandMMPackage/src/EM.cpp",
+                "line": 13,
+                "column": 21
+            },
+            {
+                "usr": "c:@F@singleEM0_C#I#I#I#d#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "singleEM0_C(int, Rcpp::List, Rcpp::NumericMatrix, double)",
+                "file": "/home/bouba/Ensai Informatique/Stage_3A/em-clustering-algo/EMandMMPackage/src/EM.cpp",
+                "line": 58,
+                "column": 12
+            },
+            {
+                "usr": "c:@S@missInt",
+                "kind": 2,
+                "parent_name": "",
+                "name": "missInt",
+                "file": "/home/bouba/Ensai Informatique/Stage_3A/em-clustering-algo/EMandMMPackage/src/EM.cpp",
+                "line": 215,
+                "column": 7
+            },
+            {
+                "usr": "c:@S@missInt@F@operator()#&1d#1",
+                "kind": 7,
+                "parent_name": "missInt",
+                "name": "operator(const double &)",
+                "file": "/home/bouba/Ensai Informatique/Stage_3A/em-clustering-algo/EMandMMPackage/src/EM.cpp",
+                "line": 224,
+                "column": 12
+            },
+            {
+                "usr": "c:@F@singleEM_C#I#I#I#d#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "singleEM_C(int, Rcpp::List, Rcpp::NumericMatrix, double)",
+                "file": "/home/bouba/Ensai Informatique/Stage_3A/em-clustering-algo/EMandMMPackage/src/EM.cpp",
+                "line": 232,
+                "column": 12
+            }
+        ]
+    }
+]

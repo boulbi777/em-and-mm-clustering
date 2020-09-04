@@ -1,0 +1,11 @@
+Package: EMandMMPackage
+Type: Package
+Title: What the package does (short line)
+Version: 1.0
+Date: 2020-08-27
+Author: Who wrote it
+Maintainer: Who to complain to <yourfault@somewhere.net>
+Description: More about what it does (maybe more than oneline)
+License: What license is it under?
+Imports: gtools, RcppEigen (>= 0.3.3.4.0), RcppNumerical
+LinkingTo: Rcpp, RcppEigen, RcppNumerical

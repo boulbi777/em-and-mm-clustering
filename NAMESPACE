@@ -1,0 +1,6 @@
+useDynLib(EMandMMPackage)
+import(RcppEigen)
+import(RcppNumerical)
+import(gtools)
+importFrom(Rcpp, evalCpp)
+exportPattern("^[[:alpha:]]+")
