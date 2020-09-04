@@ -43,18 +43,18 @@ Nous détaillons dans cette section l'utilité des différentes méthodes implé
 
 @param delta *double*. Disparité des points de l'échantillon
 
-@return *list*.Retourne la liste des échantillons X, Z, R.\\
+@return *list*.Retourne la liste des échantillons X, Z, R.
 
 
 
 
-\item **initialisation <- function(K, ech, seed)** : Cette fonction permet d'initialisation des paramètres de l'algo EM.
+**initialisation <- function(K, ech, seed)** : Cette fonction permet d'initialisation des paramètres de l'algo EM.
 
 @param K *integer*. nombre de clusters
 
 @param ech *list*. L'échantillon complet généré (généralement l'output de la fonction **simulerEchantillon}).
 
-@return *list*. retourne La liste complète des paramètres du modèle.\\
+@return *list*. retourne La liste complète des paramètres du modèle.
 
 
 
