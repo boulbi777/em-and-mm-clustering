@@ -32,7 +32,7 @@ Le code du projet a été mis en place selon la structure d'un package. Nous dé
 Nous détaillons dans cette section l'utilité des différentes méthodes implémentées en R.
 
 
-**simulerEchantillon <- function(n, p=2, K, delta)} : Cette fonction permettant de simuler les données de l'échantillon dans un espace $`\mathbb{R}^p`$ avec un nombre de classes prédéfinies.
+**simulerEchantillon <- function(n, p=2, K, delta)** : Cette fonction permettant de simuler les données de l'échantillon dans un espace $`\mathbb{R}^p`$ avec un nombre de classes prédéfinies.
 
 @param n *integer*. la taille de l'échantillon à simuler 
 
