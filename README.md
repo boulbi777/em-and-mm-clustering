@@ -58,30 +58,30 @@ Nous détaillons dans cette section l'utilité des différentes méthodes implé
 
 
 
-**singleEM0 <- function(x, K, param, tol)** : Algorithme EM dans le cas des données manquantes avec $\beta_{kj}=0$ (cas MCAR). Cette fonction peut être exécutée sans préalablement utiliser les deux précédentes (i.e. Lorsqu'un utilisateur possède déjà ses propres données et une initialisation des paramètres de son modèle).
+**singleEM0 <- function(x, K, param, tol)** : Algorithme EM dans le cas des données manquantes avec $`\beta_{kj}=0`$ (cas MCAR). Cette fonction peut être exécutée sans préalablement utiliser les deux précédentes (i.e. Lorsqu'un utilisateur possède déjà ses propres données et une initialisation des paramètres de son modèle).
 
 @param x *matrix*. L'échantillon utilisé pour le clustering
 
-@param K *integer*. Le nombre de classe à prédire ($K < 2^p+1$)
+@param K *integer*. Le nombre de classe à prédire ($`K < 2^p+1`$)
 
 @param param *list*. Ensemble des paramètres initialisés de l'algo
 
 @param tol *double*. Critère d'arrêt de l'algorithme
 
-@return *list*. Retourne l'ensemble des paramètres\\
+@return *list*. Retourne l'ensemble des paramètres
 
 
-**singleEM <- function(x, K, param, tol)** : Algorithme EM dans le cas des données manquantes avec $\beta_{kj} \neq 0$.
+**singleEM <- function(x, K, param, tol)** : Algorithme EM dans le cas des données manquantes avec $`\beta_{kj} \neq 0`$.
 
 @param x *matrix*. L'échantillon utilisé pour le clustering
 
-@param K *integer*. Le nombre de classe à prédire ($K < 2^p+1$)
+@param K *integer*. Le nombre de classe à prédire ($`K < 2^p+1`$)
 
 @param param *list*. Ensemble des paramètres initialisés de l'algo
 
 @param tol *double*. Critère d'arrêt de l'algorithme
 
-@return *list*. Retourne l'ensemble des paramètres\\
+@return *list*. Retourne l'ensemble des paramètres
 
 
 
@@ -117,7 +117,7 @@ Durant ce projet, la librairie Eigen a beaucoup été utilisée. Il s'agit d'une
 
 Pour vérifier que notre algorithme fonctionne bien, il est d'usage de faire appel au graphe d'évolution de la vraisemblance. Comme énoncé précédemment, nous utilisons plutôt la log-vraisemblance qui n'est juste qu'une transformation monotone de cette dernière.
 
-L'EM est un algorithme itératif, qui est construit de telle manière que l'augmentation de la valeur de la log-vraisemblance à chaque itération est garantie (i.e. $l(\Theta^{(t)}) \leq l(\Theta^{(t+1)}) ~~ \forall t \geq 0 $).
+L'EM est un algorithme itératif, qui est construit de telle manière que l'augmentation de la valeur de la log-vraisemblance à chaque itération est garantie (i.e. $`l(\Theta^{(t)}) \leq l(\Theta^{(t+1)}) ~~ \forall t \geq 0`$).
 
 Les cas montrent de bons résultats.
 
